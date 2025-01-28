@@ -68,7 +68,7 @@ DSA-Labs/
 1. **Clone the Repository**:
 
    ```bash
-   git clone https://github.com/your-username/DSA-Labs.git
+   git clone https://github.com/RohanXD/DSA-Labs.git
    ```
 
 2. **Navigate to a Topic**:
