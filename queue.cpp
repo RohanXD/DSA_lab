@@ -62,6 +62,14 @@ public:
         cout << endl;
     }
 
+    void totalElements() {
+        if (isEmpty()) {
+            cout << "Queue is empty!" << endl;
+        } else {
+            cout << "Total number of elements in the queue: " << (rear - front + 1) << endl;
+        }
+    }
+
     ~Queue() {
         delete[] arr;
     }
@@ -77,7 +85,7 @@ int main() {
 
     int choice, value;
     do {
-        cout << "\nMenu:\n1. Enqueue\n2. Dequeue\n3. Display\n4. Exit\nEnter your choice: ";
+        cout << "\nMenu:\n1. Enqueue\n2. Dequeue\n3. Display\n4. Total Elements\n5. Exit\nEnter your choice: ";
         cin >> choice;
 
         switch (choice) {
@@ -93,12 +101,16 @@ int main() {
             q.display();
             break;
         case 4:
+            q.totalElements();
+            break;
+        case 5:
             cout << "Exiting program." << endl;
             break;
         default:
             cout << "Invalid choice! Try again." << endl;
         }
-    } while (choice != 4);
+    } while (choice != 5);
 
     return 0;
 }
+
